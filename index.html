@@ -10,53 +10,75 @@
    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Битроид",
-      "url": "https://example.com"
+      "@type": "WebSite",
+      "url": "https://example.com/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Битроид",
+        "logo": "https://example.com/logo.png"
+      }
     }
     </script>
 
-   <link rel="stylesheet" href="css/normalize.css">
+   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
    <!-- <link rel="stylesheet" href="css/main.css"> -->
    <link rel="stylesheet" href="styles/css/main.css">
 </head>
 
 <body>
    <header class="header">
-      <div class="header__container">
+      <div class="header__container container">
          <a href="/" class="header__logo">
-            <img src="img/logo.svg" alt="Битроид">
+            <svg>
+               <use xlink:href="./icons/sprite.svg#h-logo"></use>
+            </svg>
          </a>
+         <button class="header__burger" aria-label="Открыть меню">
+            <span></span>
+         </button>
 
          <nav class="header__nav">
             <ul class="header__menu">
-               <li class="header__item"><a href="#" class="header__link">О компании</a></li>
                <li class="header__item"><a href="#" class="header__link">Услуги</a></li>
-               <li class="header__item"><a href="#" class="header__link">Кейсы</a></li>
-               <li class="header__item"><a href="#" class="header__link">Отзывы</a></li>
-               <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+               <li class="header__item"><a href="#" class="header__link">Продукты</a></li>
+               <li class="header__item"><a href="#" class="header__link">Готовые решения</a></li>
+               <li class="header__item"><a href="#" class="header__link">Кейсы и проекты</a></li>
+               <li class="header__item"><a href="#" class="header__link">О нас</a></li>
             </ul>
          </nav>
 
          <div class="header__actions">
-            <a href="tel:+79990000000" class="header__phone">+7 (999) 000-00-00</a>
-            <input type="search" class="header__search" placeholder="Поиск">
-            <button class="header__button">Обсудить проект</button>
-
-            <button class="header__burger" aria-label="Открыть меню">
-               <span></span>
-            </button>
+            <a href="tel:+74954142808" class="header__phone">+7 (495) 414 28 08</a>
+            <form action="/search/" method="get" role="search">
+               <input type="search" class="header__search" placeholder="Поиск">
+               <button type="submit" class="header__search-icon">
+                  <svg>
+                     <use xlink:href="./icons/sprite.svg#h-lens"></use>
+                  </svg>
+               </button>
+            </form>
+            <button class="header__button action-button">Обсудить проект</button>
          </div>
       </div>
    </header>
 
    <main>
+      <div class="breadcrumb">
+         <div class="breadcrumb__container container">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+               <ul class="breadcrumb__list">
+                  <li class="breadcrumb__item"><a href="/">Главная</a></li>
+                  <li class="breadcrumb__item"><a href="/services">Услуги</a></li>
+                  <li class="breadcrumb__item"><a href="/web-dev">Создание сайтов</a></li>
+                  <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Сайт+SEO</li>
+               </ul>
+            </nav>
+         </div>
+      </div>
    </main>
 
    <footer class="footer">
-      <div class="footer__container">
-         <p>© Битроид, 2026</p>
-      </div>
+      
    </footer>
 
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

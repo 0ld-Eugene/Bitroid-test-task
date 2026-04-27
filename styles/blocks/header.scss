@@ -1,0 +1,118 @@
+@use "helpers/index" as h;
+
+.header {
+   height: 5.25rem;
+   display: flex;
+   align-items: center;
+
+   // .header__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+   }
+
+   // .header__logo
+
+   &__logo {
+      display: block;
+      width: 198px;
+      height: 64px;
+      svg {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   // .header__burger
+
+   &__burger {
+      display: none;
+   }
+
+   // .header__nav
+
+   &__nav {
+      margin-left: 1.625rem;
+      margin-right: auto;
+   }
+
+   // .header__menu
+
+   &__menu {
+      display: flex;
+      gap: 1.5rem;
+   }
+
+   // .header__item
+
+   &__item {
+      position: relative;
+      cursor: pointer;
+   }
+
+   &__item::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 0.0625rem;
+      right: 0;
+      width: 0.9375rem;
+      height: 0.9375rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.685 6.12246L7.99747 10.81C7.93214 10.8755 7.85452 10.9275 7.76906 10.963C7.68359 10.9985 7.59196 11.0168 7.49942 11.0168C7.40688 11.0168 7.31525 10.9985 7.22978 10.963C7.14432 10.9275 7.0667 10.8755 7.00137 10.81L2.31387 6.12246C2.18178 5.99037 2.10757 5.81122 2.10757 5.62441C2.10757 5.43761 2.18178 5.25846 2.31387 5.12637C2.44596 4.99428 2.62512 4.92007 2.81192 4.92007C2.99872 4.92007 3.17788 4.99428 3.30997 5.12637L7.50001 9.31641L11.69 5.12578C11.8221 4.99369 12.0013 4.91948 12.1881 4.91948C12.3749 4.91948 12.554 4.99369 12.6861 5.12578C12.8182 5.25787 12.8924 5.43702 12.8924 5.62383C12.8924 5.81063 12.8182 5.98978 12.6861 6.12188L12.685 6.12246Z' fill='%231E1E1E'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+   }
+
+   &__item:hover::before {
+      transform: rotate(180deg);
+   }
+
+   // .header__link
+
+   &__link {
+      padding-right: 1.1875rem;
+   }
+
+   // .header__actions
+
+   &__actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+   }
+
+   // .header__phone
+
+   &__phone {
+   }
+
+   // .header__search
+
+   &__search {
+      display: none;
+   }
+
+   // .header__search-icon
+
+   &__search-icon {
+      padding: 4px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      svg {
+         width: 100%;
+         height: 100%;
+         color: h.$svg-color;
+      }
+   }
+
+   // .header__button
+
+   &__button {
+   }
+}

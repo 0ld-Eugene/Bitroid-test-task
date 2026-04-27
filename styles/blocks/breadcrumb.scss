@@ -1,0 +1,29 @@
+.breadcrumb {
+   padding: 1.34375rem 0;
+   // .breadcrumb__container
+
+   &__container {
+   }
+
+   // .breadcrumb__list
+
+   &__list {
+      display: flex;
+   }
+
+   // .breadcrumb__item
+
+   &__item {
+   }
+
+   &__item:not(:last-child)::after {
+      content: "/";
+      margin: 0 10px;
+      color: var(--color-text-secondary);
+   }
+
+   // .breadcrumb__item--active
+
+   &__item--active {
+   }
+}

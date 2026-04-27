@@ -1,4 +1,4 @@
-@use "helpers/index" as i;
+@use "index" as h;
 
 :root {
    --color-white: #ffffff;
@@ -13,32 +13,16 @@
    --font-main: "Roboto", sans-serif;
 }
 
-.font-secondary {
-   @include i.font(i.$ff-accent, 400, normal);
-}
-.font-main {
-   @include i.font(i.$ff-accent, 600, normal);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
 }
 
-h1 {
-}
-h2 {
-}
-h3 {
-}
-h4 {
-}
-h5 {
-}
-h6 {
+html {
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+   box-sizing: border-box;
 }
 
 body {
@@ -46,6 +30,20 @@ body {
    flex-direction: column;
    min-height: 100vh;
    margin: 0;
+   font-family: var(--font-main);
+   font-weight: 400;
+   font-style: normal;
+   font-size: 16px;
+   line-height: 1.3;
+   letter-spacing: 0em;
+   color: var(--color-text-main);
+}
+
+.container {
+   max-width: 1350px;
+   margin: 0 auto;
+   padding: 0 15px;
+   width: 100%;
 }
 
 main {
@@ -54,4 +52,48 @@ main {
 
 footer {
    flex-shrink: 0;
+   font-size: h.$fs-small;
+}
+
+h1,
+h2,
+h3 {
+   font-weight: 700;
+}
+
+h1 {
+   font-size: h.$fs-h1;
+}
+h2 {
+   font-size: h.$fs-h2;
+}
+h3 {
+   font-size: h.$fs-h3;
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-text-main);
+}
+
+button {
+   background-color: transparent;
+   border: none;
+}
+
+.action-button {
+   padding: 16px 35px;
+   background-color: h.$button-color;
+   border-radius: 60px;
+   border: none;
+   font-weight: 700;
+   line-height: 1.2;
+   color: var(--color-white);
+   cursor: pointer;
 }

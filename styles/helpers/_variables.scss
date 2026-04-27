@@ -1,1 +1,17 @@
-$ff-accent: "Roboto", sans-serif;
+// Шрифты
+$ff-main: "Roboto", sans-serif;
+
+// Шрифты (размеры)
+$fs-h1: 4rem; // 64px
+$fs-h2: 2.5rem; // 40px
+$fs-h3: 1.5rem; // 24px
+$fs-body: 1rem; // 16px
+$fs-small: 0.875rem; // 14px
+
+// Отступы
+$margin-section: 9.375rem; // 150px
+$margin-h2-subtitle: 1.25rem; // 20px
+
+// Цвета
+$svg-color: var(--color-text-main);
+$button-color: var(--color-button);
